@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Image Search</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #e0f7fa, #ffffff); 
+            margin: 0; 
+            padding-top: 60px; 
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 20px; 
+            z-index: 1000; 
+            font-size: 14px;
+        }
+        .navbar a {
+            color: #007BFF; 
+            text-decoration: none; 
+            margin-left: 10px; 
+        }
+        .navbar a:hover {
+            text-decoration: underline; 
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center; 
+        }
+        .logo {
+            font-size: 64px; 
+            color: #4285F4; 
+            margin-bottom: 20px; 
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="text"] {
+            border-radius: 20px;
+            padding: 12px;
+            width: 320px; 
+            margin-bottom: 10px; 
+            border: 2px solid #007BFF; 
+        }
+        input[type="submit"] {
+            border-radius: 20px;
+            padding: 12px 24px;
+            background-color: #007BFF; 
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px; 
+            width: 320px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Google Search</a> |
+        <a href="advanced_search.html">Advanced Search</a>
+    </div>
+    <div class="container">
+        <div class="logo">Google Image Search</div>
+        <form action="https://www.google.com/search" method="get">
+            <input type="text" name="q" placeholder="Search Images...">
+            <input type="hidden" name="tbm" value="isch"> 
+            <input type="submit" value="Search">
+        </form>
+    </div>
+</body>
+</html>

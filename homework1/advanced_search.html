@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Advanced Search</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; 
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+        }
+        input[type="text"] {
+            border-radius: 15px;
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #007BFF; 
+            margin-bottom: 10px;
+            transition: border 0.3s;
+        }
+        input[type="text"]:focus {
+            border-color: #0056b3; 
+            outline: none;
+        }
+        input[type="submit"] {
+            border-radius: 5px;
+            padding: 10px 20px;
+            background-color: #007BFF; 
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 300px;
+            border: none;
+            transition: background 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; 
+        }
+        .links {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="links">
+            <a href="index.html">Google Search</a>
+        </div>
+        <form action="https://www.google.com/search" method="get">
+            <label>找到包含... “所有这些词：”</label>
+            <input type="text" name="q" placeholder="所有这些词" required>
+            <label>找到包含... “这个确切的词或短语：”</label>
+            <input type="text" name="exactphrase" placeholder="确切的词或短语">
+            <label>找到包含... “任意这些词：”</label>
+            <input type="text" name="anyofthese" placeholder="任意这些词">
+            <label>找到不包含... “这些词：”</label>
+            <input type="text" name="noneofthese" placeholder="不包含这些词">
+            <input type="submit" value="Advanced Search">
+        </form>
+    </div>
+</body>
+</html>
